@@ -11,7 +11,6 @@ renamed as (
     select
         orders_id,
         shipping_fee,
-        shipping_fee_1,
         logcost,
         ship_cost
 
@@ -19,4 +18,8 @@ renamed as (
 
 )
 
-select * from renamed
+select orders_id,
+        shipping_fee,
+        logcost,
+        CAST(ship_cost AS INT64) AS ship_cost
+        from renamed
