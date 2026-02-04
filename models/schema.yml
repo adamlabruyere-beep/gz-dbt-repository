@@ -1,6 +1,6 @@
 sources:
    - name: raw
-     database: dbt_yml_files
+     database: data-analytics-sql-485211
      schema: gz_raw_data
      loader: bigquery
      description: gz_raw_data
