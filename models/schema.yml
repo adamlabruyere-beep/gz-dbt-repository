@@ -7,5 +7,8 @@ sources:
      freshness:
      tables:
        - name: raw_gz_sales
+         identifier: raw_gz_sales
        - name: raw_gz_product
+         identifier: raw_gz_product
        - name: raw_gz_ship
+         identifier: raw_gz_ship
