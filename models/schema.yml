@@ -4,7 +4,6 @@ sources:
      schema: gz_raw_data
      loader: bigquery
      description: gz_raw_data
-     freshness:
      tables:
        - name: raw_gz_sales
          identifier: raw_gz_sales
