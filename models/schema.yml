@@ -30,3 +30,18 @@ sources:
          identifier: raw_gz_criteo
        - name: facebook
          identifier: raw_gz_facebook
+
+models:
+       - name: int_campaigns
+         identifier: int_campaigns
+         description: "accumulation des ads (adwords + bing + criteo + facebook)"
+         columns:
+          - name: date_date
+            description: dates des campagnes
+         tests:
+         - unique:
+            column_name: "(date_date || '-' || campaign_key)"
+         - not_null:
+            column_name: "(date_date || '-' || campaign_key)"
+
+                 
