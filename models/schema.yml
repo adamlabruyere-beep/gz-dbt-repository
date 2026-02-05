@@ -1,0 +1,24 @@
+sources:
+   - name: raw
+     database: data-analytics-sql-485211
+     schema: gz_raw_data
+     loader: bigquery
+     description: gz_raw_data
+     tables:
+       - name: sales
+         identifier: raw_gz_sales
+       - name: product
+         identifier: raw_gz_product
+         columns:
+          - name: products_id
+         tests: 
+          - unique
+          - not_null
+       - name: ship
+         identifier: raw_gz_ship
+         columns:
+          - name: orders_id
+            description: orders_id
+         tests: 
+          - unique
+          - not_null
